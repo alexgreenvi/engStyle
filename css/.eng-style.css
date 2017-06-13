@@ -410,7 +410,10 @@ ul ul, ol ul, ul ol, ol ol {
 .cssTextColor-red {color: #e11624!important;}
 .cssTextColor-green {color: #97ce6f!important;}
 
-.cssBorderRadius {border-radius: 3px;}
+.cssBorderRadius {border-radius: 3px;
+    background-clip:  padding-box;
+    behavior: url(PIE.htc);
+}
 .cssBorderRadius.setRadius-100 {border-radius: 100%;}
 .cssBorderRadius-top {border-top-right-radius: 3px; border-top-left-radius: 3px;}
 .cssBorderRadius-bottom {border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
