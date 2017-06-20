@@ -1,14 +1,81 @@
 @charset "UTF-8";
-
 /*
     * Alex GreenVi
-    * Version - 2.0
+    * Version - 4.0
 */
+@font-face {
+    font-family: Baufra;
+    src: url("../css/fonts/Baufra/Baufra-bold.eot");
+    src: url("../css/fonts/Baufra/Baufra-bold.eot?#iefix") format("embedded-opentype"),
+    url("../css/fonts/Baufra/Baufra-bold.woff") format("woff"),
+    url(".../css/fonts/Baufra/Baufra-bold.ttf") format("truetype"),
+    url("../css/fonts/Baufra/Baufra-bold.svg#Baufra") format("svg");
+    font-weight: 800;
+    font-style: normal
+}
+@font-face {
+    font-family: Baufra;
+    src: url("../css/fonts/Baufra/Baufra-semibold.eot");
+    src: url("../css/fonts/Baufra/Baufra-semibold.eot?#iefix") format("embedded-opentype"),
+    url("../css/fonts/Baufra/Baufra-semibold.woff") format("woff"),
+    url(".../css/fonts/Baufra/Baufra-semibold.ttf") format("truetype"),
+    url("../css/fonts/Baufra/Baufra-semibold.svg#Baufra") format("svg");
+    font-weight: 600;
+    font-style: normal
+}
+@font-face {
+    font-family: Baufra;
+    src: url("../css/fonts/Baufra/Baufra-medium.eot");
+    src: url("../css/fonts/Baufra/Baufra-medium.eot?#iefix") format("embedded-opentype"),
+    url("../css/fonts/Baufra/Baufra-medium.woff") format("woff"),
+    url(".../css/fonts/Baufra/Baufra-medium.ttf") format("truetype"),
+    url("../css/fonts/Baufra/Baufra-medium.svg#Baufra") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+@font-face {
+    font-family: Baufra;
+    src: url("../css/fonts/Baufra/Baufra-light.eot");
+    src: url("../css/fonts/Baufra/Baufra-light.eot?#iefix") format("embedded-opentype"),
+    url("../css/fonts/Baufra/Baufra-light.woff") format("woff"),
+    url(".../css/fonts/Baufra/Baufra-light.ttf") format("truetype"),
+    url("../css/fonts/Baufra/Baufra-light.svg#Baufra") format("svg");
+    font-weight: 100;
+    font-style: normal
+}
+
+::-webkit-scrollbar { width: 3px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #999; }
+::-webkit-scrollbar-track {  background-color: #999;}
+::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #c50013; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #999;}
+::-webkit-resizer { background-color: #666;}
+
 html {}
-body {
-    font-family: "Comfortaa", Helvetica, Arial, sans-serif;
-    font-size: 13px; font-weight: 800; line-height: 1.5; color: #333333;
+body { font-family: 'Baufra', sans-serif; font-size: 15px;
+    font-weight: 400; line-height: 1.55em; color: #404040;
     background-color: #ffffff;
 }
 
+a { color: #6b6b6e; text-decoration: none; }
+a:hover,
+a:focus { color: #0366d6;}
 
+hr {border-color: #eeeeee;}
+
+ul, ol {margin: 0; padding: 0;}
+
+li {list-style: none;}
+
+h1 {font-family: 'Baufra', serif;
+    font-size: 27px; font-weight: 600; color: #000;
+}
+
+input, button, textarea, select {font-family: 'Baufra', sans-serif; line-height: 1.55em;}
+input {font-size: 13px; font-weight: 400;}
+input[type="text"]:focus { outline: none; }
+
+/*
+* Погнали
+*/
