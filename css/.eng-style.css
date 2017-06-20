@@ -281,9 +281,8 @@ ul ul, ol ul, ul ol, ol ol {
 
 .container-full {position: relative; display: table; width: 100%;}
 
-.container {width: 1155px; background: #fff;
-    position: relative; display: table;
-    margin: auto;}
+.container {width: 1155px; margin: auto;
+    position: relative; display: table;}
 
 .con-content {}
 .con-center {}
