@@ -270,7 +270,8 @@ ul ul, ol ul, ul ol, ol ol {
     * XXX <1800 18
     * XL- 1200, L - 960, M - 720, S - 640;
 */
-.con-content , .con-center , .con-left , .con-right ,
+.container-main , .container-main-big ,
+.container-center , .container-left , .container-right ,
 .col,
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
 .col-7, .col-8, .col-9, .col-10, .col-11,.col-12,
@@ -285,14 +286,35 @@ ul ul, ol ul, ul ol, ol ol {
 .container {width: 1155px; margin: auto;
     position: relative; display: table;}
 
-.con-content {}
-.con-center {}
-.con-left {}
-.con-right {}
+.container-main {width: 835px;}
+.container-main-big {width: 905px;}
 
-@media (max-width: 1200px) {.container {width: 955px;}}
-@media (max-width: 992px) {.container {width: 768px;}}
-@media (max-width: 768px) {.container {width: 100%;}}
+.container-center {width: 585px;}
+.container-left {width: 230px; margin-right: 20px;}
+.container-right {width: 300px; margin-left: 20px;}
+
+@media only screen and (max-width: 1200px) {
+    .container {width: 955px;}
+
+    .container-main {width: 685px;}
+    .container-main-big {width: 705px;}
+    .container-center {}
+    .container-left {width: 180px; margin-right: 20px;}
+    .container-right {width: 250px; margin-left: 20px;}
+}
+@media only screen and (max-width: 992px) {
+    .container {width: 768px;}
+
+    .container-main,
+    .container-main-big,
+    .container-center {width: 100%;}
+    .container-left {width: 100%; margin-right: 0;}
+    .container-right {width: 100%; margin-left: 0;}
+}
+@media only screen and (max-width: 780px) {
+    .container {width: 100%; padding: 20px;}
+    .container.-not-mobile {padding: 0;}
+}
 
 .mobile {width: auto;}
 .row {width: 100%; clear: both; float: left;}
@@ -428,6 +450,44 @@ ul ul, ol ul, ul ol, ol ol {
 }
 
 /*
+ * Для разработки
+*/
+._developer {}
+._developer img {background: #c5c5c5;}
+
+._developer .row:before,
+._developer .col:before,
+._developer .col-1:before , ._developer .col-2:before , ._developer .col-3:before , ._developer .col-4:before , ._developer .col-5:before ,  ._developer .col-6:before ,
+._developer .col-7:before , ._developer .col-8:before ,  ._developer .col-9:before , ._developer .col-10:before , ._developer .col-11:before , ._developer .col-12:before ,
+._developer .col-13:before , ._developer .col-14:before , ._developer .col-15:before , ._developer .col-16:before , ._developer .col-17:before ,  ._developer .col-18:before ,
+._developer .col-19:before , ._developer .col-20:before , ._developer .col-21:before , ._developer .col-22:before ,  ._developer .col-23:before , ._developer .col-24:before ,
+
+._developer .container:before,
+._developer .container-main-big:before,
+._developer .container-main:before,
+._developer .container-right:before,
+._developer .container-left:before,
+._developer .container-center:before {content: ""; position: absolute; z-index: -1;
+    display: block; width: 100%; height: 100%;
+    border-width: 1px 1px 0 1px;
+    border-style: dashed;
+    border-color: #c5c5c5;
+}
+._developer .row:last-child:before,
+._developer .container:last-child:before {border-bottom-width: 1px;}
+
+._developer .col:before,
+._developer .col-1:before , ._developer .col-2:before , ._developer .col-3:before , ._developer .col-4:before , ._developer .col-5:before ,  ._developer .col-6:before ,
+._developer .col-7:before , ._developer .col-8:before ,  ._developer .col-9:before , ._developer .col-10:before , ._developer .col-11:before , ._developer .col-12:before ,
+._developer .col-13:before , ._developer .col-14:before , ._developer .col-15:before , ._developer .col-16:before , ._developer .col-17:before ,  ._developer .col-18:before ,
+._developer .col-19:before , ._developer .col-20:before , ._developer .col-21:before , ._developer .col-22:before ,  ._developer .col-23:before , ._developer .col-24:before ,
+
+._developer .container-main-big:before,
+._developer .container-main:before,
+._developer .container-right:before,
+._developer .container-left:before,
+._developer .container-center:before  {border-top: 0; border-bottom: 0;}
+/*
  * Таблицы
 */
 ._table-object {display: table;}
@@ -436,12 +496,12 @@ ul ul, ol ul, ul ol, ol ol {
 /*
  * Работа с изображение
 */
-._svg {width: 18px; height: 18px; max-height: 100%; margin-top: -2px;
+._svg {width: 18px; height: auto; max-height: 100%; margin-top: -2px;
     fill: currentColor; vertical-align: middle;}
-
-/*
- * Быстрое меню
-*/
+._svg.-size26 {width: 26px;}
+    /*
+     * Быстрое меню
+    */
 ._nav {}
 ._nav li,
 ._nav li a {display: inline-block;}

@@ -55,7 +55,7 @@
 
 html {}
 body {
-    font-family: 'Baufra', sans-serif; font-size: 15px;
+    font-family: 'Baufra', sans-serif; font-size: 14px;
     font-weight: 400; line-height: 1.55em; color: #404040;
     background-color: #ffffff;
 }
@@ -84,3 +84,22 @@ input[type="text"]:focus { outline: none; }
 /*
 * Погнали
 */
+
+.elHeader {padding: 15px 0;}
+.elHeader .logo ,
+.elHeader .search {
+    display: inline-block;
+}
+.elHeader .logo {margin-right: 20px;}
+.elHeader .logo img {width: 150px; height: 45px;}
+.elHeader .search {padding: 5px 0; position: relative;}
+.elHeader .search input {padding: 7px 10px; width: 270px;
+    font-weight: 600;
+    border: 1px solid #ccc;}
+.elHeader .search button {position: absolute; top: 10px; right: 0;
+    background: transparent; border: 0;}
+
+.elHeader .menu {padding: 5px 0;}
+
+
+.elDetailHead {}
