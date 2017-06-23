@@ -507,6 +507,21 @@ ul ul, ol ul, ul ol, ol ol {
 ._nav li a {display: inline-block;}
 ._nav li a {padding: 5px 10px;}
 
+._btn {display: inline-block; padding: 5px 10px;
+    font-size: 13px; letter-spacing: 1px; font-weight: 600;
+    text-transform: uppercase; cursor: pointer;
+    border-radius: 3px;
+    background: #02b875; color: #fff;
+    border-color: #02b875;
+    transition: .1s background-color,.1s border-color,.1s color,.1s fill;
+}
+._btn:focus, ._btn:hover,
+._btn.active {
+    color: #fff;
+    background: #00ab6b;
+    border-color: #00ab6b;
+}
+
 /*
  * Табы перекления
 */
