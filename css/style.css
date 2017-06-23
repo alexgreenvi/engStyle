@@ -54,12 +54,16 @@
 ::-webkit-resizer { background-color: #666;}
 
 html {}
-body { font-family: 'Baufra', sans-serif; font-size: 15px;
+body {
+    font-family: 'Baufra', sans-serif; font-size: 15px;
     font-weight: 400; line-height: 1.55em; color: #404040;
     background-color: #ffffff;
 }
 
-a { color: #6b6b6e; text-decoration: none; }
+a {
+    color: #6b6b6e;
+    text-decoration: none;
+}
 a:hover,
 a:focus { color: #0366d6;}
 

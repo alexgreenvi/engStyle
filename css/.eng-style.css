@@ -267,6 +267,7 @@ ul ul, ol ul, ul ol, ol ol {
 }
 /*
     * Стили для Адаптива.
+    * XXX <1800 18
     * XL- 1200, L - 960, M - 720, S - 640;
 */
 .con-content , .con-center , .con-left , .con-right ,
@@ -289,19 +290,19 @@ ul ul, ol ul, ul ol, ol ol {
 .con-left {}
 .con-right {}
 
-@media only screen and (max-width: 1200px) {.container {width: 955px;}}
-@media only screen and (max-width: 992px) {.container {width: 768px;}}
-@media only screen and (max-width: 768px) {.container {width: 100%;}}
+@media (max-width: 1200px) {.container {width: 955px;}}
+@media (max-width: 992px) {.container {width: 768px;}}
+@media (max-width: 768px) {.container {width: 100%;}}
 
 .mobile {width: auto;}
 .row {width: 100%; clear: both; float: left;}
 
 .container:before, .container:after,
-.container-fluid:before, .container-fluid:after,
+.container-full:before, .container-full:after,
 .row:before , .row:after {content: ""; display: table;}
 
 .container:after,
-.container-fluid:after,
+.container-full:after,
 .row:after {clear: both;}
 
 .col {width: auto;}
@@ -312,7 +313,7 @@ ul ul, ol ul, ul ol, ol ol {
 
 
 /* XL 1200 */
-@media only screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
     .xl {width: auto;}
     .xl-1 {width: 4.16666667%;} .xl-2 {width: 8.33333333%;} .xl-3 {width: 12.5%;} .xl-4 {width: 16.66666667%;} .xl-5 {width: 20.83333333%;}  .xl-6 {width: 25%;}
     .xl-7 {width: 29.16666667%;} .xl-8 {width: 33.33333333%;}  .xl-9 {width: 37.5%;} .xl-10 { width: 41.66666667%;} .xl-11 {width: 45.83333333%;} .xl-12 {width: 50%;}
@@ -328,7 +329,7 @@ ul ul, ol ul, ul ol, ol ol {
     .xl-css-padding-no {padding: 0!important;}
 }
 /* L 992 */
-@media only screen and (max-width: 992px) {
+@media (max-width: 992px) {
     .l {width: auto;}
     .l-1 {width: 4.16666667%;} .l-2 {width: 8.33333333%;} .l-3 {width: 12.5%;} .l-4 {width: 16.66666667%;} .l-5 {width: 20.83333333%;}  .l-6 {width: 25%;}
     .l-7 {width: 29.16666667%;} .l-8 {width: 33.33333333%;}  .l-9 {width: 37.5%;} .l-10 { width: 41.66666667%;} .l-11 {width: 45.83333333%;} .l-12 {width: 50%;}
@@ -344,7 +345,7 @@ ul ul, ol ul, ul ol, ol ol {
     .l-css-padding-no {padding: 0!important;}
 }
 /* M 768 */
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .m {width: auto;}
     .m-1 {width: 4.16666667%;} .m-2 {width: 8.33333333%;} .m-3 {width: 12.5%;} .m-4 {width: 16.66666667%;} .m-5 {width: 20.83333333%;}  .m-6 {width: 25%;}
     .m-7 {width: 29.16666667%;} .m-8 {width: 33.33333333%;}  .m-9 {width: 37.5%;} .m-10 { width: 41.66666667%;} .m-11 {width: 45.83333333%;} .m-12 {width: 50%;}
@@ -360,7 +361,7 @@ ul ul, ol ul, ul ol, ol ol {
     .m-css-padding-no {padding: 0!important;}
 }
 /* S 640 */
-@media only screen and (max-width: 640px) {
+@media (max-width: 640px) {
     .s {width: auto;}
     .s-1 {width: 4.16666667%;} .s-2 {width: 8.33333333%;} .s-3 {width: 12.5%;} .s-4 {width: 16.66666667%;} .s-5 {width: 20.83333333%;}  .s-6 {width: 25%;}
     .s-7 {width: 29.16666667%;} .s-8 {width: 33.33333333%;}  .s-9 {width: 37.5%;} .s-10 { width: 41.66666667%;} .s-11 {width: 45.83333333%;} .s-12 {width: 50%;}
@@ -376,7 +377,7 @@ ul ul, ol ul, ul ol, ol ol {
     .s-css-padding-no {padding: 0!important;}
 }
 /* N 480 */
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .n {width: auto;}
     .n-1 {width: 4.16666667%;} .n-2 {width: 8.33333333%;} .n-3 {width: 12.5%;} .n-4 {width: 16.66666667%;} .n-5 {width: 20.83333333%;}  .n-6 {width: 25%;}
     .n-7 {width: 29.16666667%;} .n-8 {width: 33.33333333%;}  .n-9 {width: 37.5%;} .n-10 { width: 41.66666667%;} .n-11 {width: 45.83333333%;} .n-12 {width: 50%;}
@@ -487,13 +488,13 @@ ul ul, ol ul, ul ol, ol ol {
  * Анимации
 */
 ._animated {animation-duration: 1s; animation-fill-mode: both;}
-._animated.infinite {animation-iteration-count: infinite;}
-._animated.hinge {animation-duration: 2s;}
+._animated.-infinite {animation-iteration-count: infinite;}
+._animated.-hinge {animation-duration: 2s;}
 
-._animated.flipOutX,
-._animated.flipOutY,
-._animated.bounceIn,
-._animated.bounceOut {animation-duration: .75s;}
+._animated.-flipOutX,
+._animated.-flipOutY,
+._animated.-bounceIn,
+._animated.-bounceOut {animation-duration: .75s;}
 
 /*
  * Всплывающте окна - в разработке
