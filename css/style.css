@@ -84,7 +84,7 @@ input[type="text"]:focus { outline: none; }
 /*
 * Статика
 */
-._avatar {display: inline-block; overflow: hidden;
+._avatar {display: inline-block; position: relative;
     vertical-align: middle; line-height: 1;
     border-radius: 3px;}
 ._avatar img {border-radius: 100%;
@@ -94,7 +94,6 @@ input[type="text"]:focus { outline: none; }
     color: #00ab6b!important;
     fill: #02b875!important;}
 
-._list-info-icon {}
 ._list-info-icon {}
 ._list-info-icon span,
 ._list-info-icon a {display: inline-block; padding: 5px 15px 5px 0;
@@ -144,7 +143,7 @@ input[type="text"]:focus { outline: none; }
     color: #666;
     border-bottom: 1px solid #eee;}
 .elDetailHead .img {position: absolute; top: 10px; right: 10px; }
-.elDetailHead .body {padding-top: 9px; padding-right: 90px;}
+.elDetailHead .body {padding: 9px 90px 20px 0;}
 .elDetailHead .body h1 {display: inline-block; margin-right: 5px; margin-bottom: 0;
     font-weight: 800;}
 .elDetailHead .body .date {margin-bottom: 18px;
@@ -155,4 +154,38 @@ input[type="text"]:focus { outline: none; }
 .elDetailHead .body ._list-info-icon {}
 .elDetailHead .body ._list-info-icon a svg {color: #ccc;}
 
+.elCatalog-list {}
+.elCatalog-list article {display: table; width: 100%;
+    position: relative; padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;}
+.elCatalog-list article .body {padding-top: 10px; padding-left: 70px;}
+.elCatalog-list article .body .img {position: absolute; left: 10px; top: 10px;}
+.elCatalog-list article .body .img img {width: 45px; height: auto;}
+.elCatalog-list article .body .name {}
+.elCatalog-list article .body .name .avatar {float: left; width: 32px; height: 32px;
+    margin-left: -42px;}
+.elCatalog-list article .body .text {font-size: 12px;}
+.elCatalog-list article h3 a {
+    font-size: 15px; color: #0366d6;}
+.elCatalog-list article h3 a:hover {}
+.elCatalog-list article .statistic {padding: 10px 0;}
+.elCatalog-list article ._list-info-icon {padding-left: 25px;}
 
+
+.elAdvert {text-align: center;}
+.elAdvert article {margin-bottom: 20px; display: inline-block;
+    background: #fff; text-align: left;
+    border-top: 4px solid #02b875;}
+.elAdvert article .name {padding: 30px 30px 0;
+    font-size: 18px; font-weight: 600;}
+.elAdvert article .name a {color: #000;}
+.elAdvert article .text {padding: 7px 30px 10px 30px;
+    font-size: 13px;}
+.elAdvert article .img {}
+.elAdvert article .img img {border: 0; width: 100%; max-width: 100%;
+    vertical-align: bottom;}
+
+@media only screen and (max-width: 1140px) {
+    .elAdvert article {vertical-align: top; width: 100%; max-width: 400px;}
+}
