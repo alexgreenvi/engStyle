@@ -9,7 +9,6 @@ $(document).ready(function() {
      ._tabs : Табы переключения div id ='val'
      */
 });
-
 var _tabs = {
     init: function () {
         this.tabs = $('._tabs');

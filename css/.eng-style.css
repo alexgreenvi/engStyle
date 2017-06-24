@@ -124,6 +124,7 @@ button, input, optgroup, select, textarea {
     margin: 0;
     color: inherit;
     font: inherit;
+    outline: none;
 }
 
 button {
@@ -499,6 +500,7 @@ ul ul, ol ul, ul ol, ol ol {
 ._svg {width: 18px; height: auto; max-height: 100%; margin-top: -2px;
     fill: currentColor; vertical-align: middle;}
 ._svg.-size26 {width: 26px;}
+._svg.-size32 {width: 32px;}
     /*
      * Быстрое меню
     */
@@ -506,6 +508,50 @@ ul ul, ol ul, ul ol, ol ol {
 ._nav li,
 ._nav li a {display: inline-block;}
 ._nav li a {padding: 5px 10px;}
+
+._button {
+    display: inline-block; position: relative;
+    height: 24px; padding: 0 15px 24px;
+    font-size: 14px; font-weight: 600; text-align: center;
+    font-style: normal; text-decoration: none; letter-spacing: 0;
+    color: rgba(0,0,0,.44);
+    background: rgba(0,0,0,0);
+    cursor: pointer;
+
+    border: 1px solid rgba(0,0,0,.15);
+    vertical-align: bottom;
+    white-space: nowrap;
+    text-rendering: auto;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 999em;
+
+    animation-timing-function: ease-out;
+    animation-fill-mode: none;
+    transition: .1s background-color,.1s border-color,.1s color,.1s fill;
+}
+._button:active {animation: button 250ms;}
+@keyframes button{
+    0%{transform:scale(1);fill:#000}
+    15%{transform:scale(.9)}
+    100%{transform:scale(1);fill:#000}
+}
+._button.-icon {position: relative; top: -1px; padding: 0 5px;
+    border: 0;
+    color: rgba(0, 0, 0, 0.44);
+}
+
+
+
+
+
+
+
+
+
 
 ._btn {display: inline-block; padding: 5px 10px;
     font-size: 13px; letter-spacing: 1px; font-weight: 600;

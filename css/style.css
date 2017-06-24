@@ -108,7 +108,8 @@ input[type="text"]:focus { outline: none; }
 * Погнали
 */
 
-.elHeader {padding: 15px 0;}
+.elHeader {padding: 5px 0; margin-bottom: 20px;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.15);}
 .elHeader .logo ,
 .elHeader .search {
     display: inline-block;
@@ -121,8 +122,23 @@ input[type="text"]:focus { outline: none; }
     border: 1px solid #ccc;}
 .elHeader .search button {position: absolute; top: 10px; right: 0;
     background: transparent; border: 0;}
+.elHeader .user {float: right; padding: 10px 0;}
 
-.elHeader .menu {padding: 5px 0;}
+.elHeader .user ._avatar {position: relative; top: -6px;}
+.elHeader .user ._avatar img {width: 32px; height: 32px;}
+
+.elHeader .menu {padding: 15px 0 5px;}
+.elHeader .menu li {margin-right: 5px;}
+.elHeader .menu li a {padding-left: 0;
+    font-weight: 800; text-transform: uppercase;
+    font-size: 13px; color: rgba(0, 0, 0, 0.44);
+}
+.elHeader .menu li.active a {color: rgba(0, 0, 0, 0.9);}
+.elHeader .menu li.line {padding-right: 15px;}
+.elHeader .menu li.line span { position: absolute; top: 18px;
+    display: inline-block; height: 23px;
+    border-left: 1px solid #353535;
+}
 
 .elLeft {}
 .elLeft .btn_back {padding: 60px 20px;}
